@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AAD0BC4D-1D15-458D-8028-BE7D2D81541B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FWVTool</RootNamespace>
+    <AssemblyName>FWVTool</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data_Layer\DataAccess.cs" />
+    <Compile Include="Entity\Medicine.cs" />
+    <Compile Include="Repo\MedicineRepo.cs" />
+    <Compile Include="Views\AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContraceptiveData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ContraceptiveData.Designer.cs">
+      <DependentUpon>ContraceptiveData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InjectableContraceptive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\InjectableContraceptive.Designer.cs">
+      <DependentUpon>InjectableContraceptive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InjectableData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\InjectableData.Designer.cs">
+      <DependentUpon>InjectableData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InjectableExisting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InjectableExisting.Designer.cs">
+      <DependentUpon>InjectableExisting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InjectableNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InjectableNew.Designer.cs">
+      <DependentUpon>InjectableNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IUDDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\IUDDatabase.Designer.cs">
+      <DependentUpon>IUDDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IUDRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\IUDRegister.Designer.cs">
+      <DependentUpon>IUDRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MyProfile.Designer.cs">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NormalPData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NormalPData.Designer.cs">
+      <DependentUpon>NormalPData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NormalPR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NormalPR.Designer.cs">
+      <DependentUpon>NormalPR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\OCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OCP.Designer.cs">
+      <DependentUpon>OCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OCPDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OCPDatabase.Designer.cs">
+      <DependentUpon>OCPDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShowMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ShowMedicine.Designer.cs">
+      <DependentUpon>ShowMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserData.Designer.cs">
+      <DependentUpon>UserData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ContraceptiveData.resx">
+      <DependentUpon>ContraceptiveData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InjectableContraceptive.resx">
+      <DependentUpon>InjectableContraceptive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InjectableData.resx">
+      <DependentUpon>InjectableData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InjectableExisting.resx">
+      <DependentUpon>InjectableExisting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InjectableNew.resx">
+      <DependentUpon>InjectableNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\IUDDatabase.resx">
+      <DependentUpon>IUDDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\IUDRegister.resx">
+      <DependentUpon>IUDRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MyProfile.resx">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NormalPData.resx">
+      <DependentUpon>NormalPData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NormalPR.resx">
+      <DependentUpon>NormalPR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OCP.resx">
+      <DependentUpon>OCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OCPDatabase.resx">
+      <DependentUpon>OCPDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ShowMedicine.resx">
+      <DependentUpon>ShowMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserData.resx">
+      <DependentUpon>UserData.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go-back-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go-back-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go-back-icon2.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
